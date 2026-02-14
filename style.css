@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: radial-gradient(circle, #8E4585, #E6E6FA , #8E4585, #E6E6FA);
+    background-size: 200% 200%;
+    animation: moveGradient 6s infinite alternate linear;
+}
+@keyframes moveGradient{
+    0% {background-position: 0% 0%;}
+    100% {background-position: 100% 100%;}
+}
+h1{
+    font-size: 2rem;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: bold;
+    color: #4A154B;
+
+}
+#btn{
+    display: flex;
+    justify-content: center;
+
+}
+.yes{
+    margin: 25px 10px 0 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.2s linear;
+    font-family: "Great Vibes",cursive;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.no{
+    margin: 25px 10px 0 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Great Vibes", cursive;
+    transition: all 0.2s linear;
+     font-size: 1.3rem;
+    font-weight: bolder;
+}
+.yes:hover{
+    background-color: rgb(172, 105, 236);
+    color: white;
+}
+.no:hover{
+    background-color: rgb(236, 105, 140);
+    color: white;
+}
+#cry{
+    font-size: 24px;
+}
+.modal{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+
+}
+
+.modal-content{
+    margin: 15% auto;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    background-color: #4A154B;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.5);
+}
+#love{
+    font-family: "Great Vibes", cursive;
+    font-size: 25px;
+    color: #E6E6FA;
+
+}
+.close {
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.2s linear;
+}
+.close:hover{
+    color:rgb(172, 105, 236);
+}
+#cry{
+    font-size: 25px;
+    color: #E6E6FA;
+    text-align: end;
+    font-family: "Shadows Into Light", cursive;
+}
+@media(max-width:768px){
+    .modal-content{
+        margin-top: 350px;
+        padding: 15px;
+        width: 80%;
+        text-align: right;
+    }
+    
+}
+@media(min-width:768px){
+    .modal-content{
+        margin-top: 450px;
+        padding: 15px;
+        width: 80%;
+        text-align: right;
+    }
+    #cry{
+        text-align: center;
+        font-size: 40px;
+    }
+    #love{
+        font-size: 40px;
+    }
+        
+}
+@media(min-width:1024px){
+    .modal-content{
+        margin-top: 280px;
+    }
+}
